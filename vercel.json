@@ -10,8 +10,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://laravel-test-daviddwiyanto-api.vercel.app",
-        "APP_KEY": "base64:CmcunpfMGiMsrXeUIbiuW0aVZ1JgpVh0PBR6OryNjsI=",
+        "APP_URL": "https://laravel11-api-test.vercel.app",
+
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
