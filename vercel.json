@@ -8,7 +8,7 @@
         "src": "/(.*)",
         "dest": "/api/index.php"    }],
     "env": {
-        "APP_ENV": "production",
+        "APP_ENV": "local",
         "APP_DEBUG": "false",
         "APP_URL": "https://laravel11-api-test-daviddvsjrggs-projects.vercel.app",
 
