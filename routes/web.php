@@ -9,4 +9,8 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 //posts
-Route::apiResource('/posts', PostController::class);
+Route::get('/posts', [PostController::class, 'index']); // Get all posts
+Route::post('/posts', [PostController::class, 'store']); // Create a new post
+Route::get('/posts/{post}', [PostController::class, 'show']); // Get a specific post
+Route::put('/posts/{post}', [PostController::class, 'update']); // Update a specific post
+Route::delete('/posts/{post}', [PostController::class, 'destroy']); // Delete a specific post
