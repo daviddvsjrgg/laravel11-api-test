@@ -12,7 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'laravel11-api-test-daviddvsjrggs-projects.vercel.app/api/*',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
