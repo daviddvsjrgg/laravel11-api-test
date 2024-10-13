@@ -15,7 +15,6 @@ return Application::configure(basePath: dirname(__DIR__))
         // Disable CSRF protection for specific routes
         $middleware->validateCsrfTokens(except: [
             'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/api/*',
-            'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/*'
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
