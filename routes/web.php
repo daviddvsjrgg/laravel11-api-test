@@ -15,7 +15,3 @@ Route::get('/posts/{post}', [PostController::class, 'show']); // Get a specific 
 Route::put('/posts/{post}', [PostController::class, 'update']); // Update a specific post
 Route::delete('/posts/{post}', [PostController::class, 'destroy']); // Delete a specific post
 
-Route::get('/david-get-storage-link', function() {
-    Artisan::call(storage::link);
-}); // Get all posts
-
