@@ -6,14 +6,16 @@ use Illuminate\Foundation\Configuration\Middleware;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
-        web: __DIR__.'/../routes/api.php',
+        web: __DIR__.'/../routes/web.php',
         api: __DIR__.'/../routes/api.php',
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        // Disable CSRF protection for specific routes
         $middleware->validateCsrfTokens(except: [
-            'laravel11-api-test-daviddvsjrggs-projects.vercel.app/api/*',
+            'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/api/*',
+            'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/*'
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
