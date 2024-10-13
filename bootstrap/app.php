@@ -12,7 +12,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->validateCsrfTokens(except: [
+            'stripe/*',
+            'api/*',
+            'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/*',
+            'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/api/*',
+            'https://laravel11-api-test-daviddvsjrggs-projects.vercel.app/api/posts',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
